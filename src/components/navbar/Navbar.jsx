@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from './navbar.module.css'
+import DarkMode from '../DarkMode/DarkMode';
 
 const links = [
     {
@@ -39,6 +40,7 @@ const Navbar = () => {
     <div className={styles.container}>
         <Link href="/" className={styles.logo}>Vivi</Link>
         <div className={styles.links}>
+        <DarkMode/>
            {links.map(link=>(<Link key={link.id}  href={link.url}>{link.title}</Link>))} 
            <button className={styles.logout}>Logout</button>
         </div>
